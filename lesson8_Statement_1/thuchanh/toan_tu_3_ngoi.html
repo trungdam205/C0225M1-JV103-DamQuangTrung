@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với toán tử ba ngôi</title>
+</head>
+<body>
+<script>
+  // Bài 1: Viết chương trình nhập vào giá trị cho a và b. Tính tổng a và b, nếu tổng nhỏ hơn 4, hiển thị chuỗi Below, ngược lại hiển thị Over. Lưu ý sử dụng toán tử ? :
+  // if ((a + b) < 4) {
+  //   result = 'Below';
+  // } else {
+  //   result = 'Over';
+  // }
+
+  let a = Number(prompt("a: "));
+  let b = Number(prompt("b: "));
+  let result = (a + b < 4) ? 'Below' : 'Over';
+  document.write(result);
+
+  // Bài 2: Viết chương trình nhập vào giá trị cho chuỗi message.
+  //         Nếu giá trị nhập vào là Employee thì hiển thị chuỗi Hello.
+  //         Còn lại nếu giá trị nhập vào là Director thì hiển thị chuỗi Greetings
+  //         Còn lại nếu giá trị nhập vào chuỗi rỗng thì hiển thị No login
+  //         Còn lại hiển thị chuỗi rỗng
+  //         Sử dụng toán tử ? : để viết chương trình với cấu trúc điều kiện như sau:
+  //         let message;
+  // if (login == 'Employee') {
+  //   message = 'Hello';
+  // } else if (login == 'Director') {
+  //   message = 'Greetings';
+  // } else if (login == '') {
+  //   message = 'No login';
+  // } else {
+  //   message = '';
+  // }
+
+  let login = prompt("Enter: ");
+  let message = (login == 'Employee') ?
+          'Hello' :
+          (login == 'Director') ?
+                  'Greetings' :
+                  (login == '') ?
+                          'No login' :
+                          '';
+  alert(message);
+
+</script>
+</body>
+</html>
