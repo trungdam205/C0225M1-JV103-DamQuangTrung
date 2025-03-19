@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C to F</title>
+</head>
+<body>
+<h1>C to F</h1>
+<input type="number" placeholder="Celsius " id="c">
+<button onclick="chuyenDoi()">Nhập</button>
+<p id="result"></p>
+<script>
+    function chuyenDoi() {
+        let cel = +document.getElementById("c").value;
+        let fha = (9*cel / 5) + 32;
+        document.getElementById("result").innerHTML = "Result: " + fha + " F";
+    }
+
+
+</script>
+</body>
+</html>

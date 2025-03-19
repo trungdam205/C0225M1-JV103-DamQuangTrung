@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Trung Bình Và Tổng Điểm</h1>
+
+<script>
+    // Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+    // Sau đó hiển thị điểm trung bình và tổng của những điểm này.
+
+    var vatLy, hoaHoc, sinhHoc;
+
+    vatLy = prompt("Điểm Vật Lý:") * 1.00;
+    hoaHoc = prompt("Điểm Hóa Học:") * 1.00;
+    sinhHoc = prompt("Điểm Sinh Học:") * 1.00;
+
+    var total = vatLy + hoaHoc + sinhHoc;
+    var avg = total / 3;
+
+    document.write("Tổng điểm: " + total.toFixed(2)+ "<br>");
+    document.write("Điểm trung bình: " + avg.toFixed(2));
+
+
+</script>
+</body>
+</html>
