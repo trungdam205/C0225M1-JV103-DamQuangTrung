@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Những năm chia hết cho 4 và không chia hết cho 100 là năm nhuận.
+    // Những năm chia hết cho 100 nhưng không chia hết cho 400 thì không phải là năm nhuận.
+    // Những năm chia hết đồng thời cho 100 và 400 là năm nhuận.
+
+    let year = parseInt(prompt("Year: "));
+    if(year % 4 == 0){
+        if(year % 100 == 0) {
+            if(year % 400 == 0){
+                document.write("Year " + year + " is " + "leap year");
+            }else{
+                document.write("Year " + year + " is " + "not leap year");
+            }
+        }else{
+            document.write("Year " + year + " is " + "  leap year");
+        }
+    }else{
+        document.write("Year " + year + " is " + "not leap year");
+    }
+
+</script>
+</body>
+</html>
