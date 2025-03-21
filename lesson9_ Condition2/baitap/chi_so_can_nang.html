@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form onsubmit="calculate(); return false;">
+    <p>Tính Chỉ Số BMI</p>
+    <input id="weight" type="number" name="weight" placeholder="weight(kg)">
+    <input id="height" type="number" name="height" placeholder="height(m)">
+    <button type="submit">Tính</button>
+    <div id="result"></div>
+</form>
+<script>
+    function calculate() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+
+
+        weight = parseFloat(weight);
+        height = parseFloat(height);
+
+        if (isNaN(weight) || isNaN(height) || height <= 0) {
+            alert("Vui lòng nhập cân nặng và chiều cao hợp lệ!");
+            return;
+        }
+        let bmi = weight / (height * height);
+        const result = document.getElementById("result");
+        result.innerHTML = ("Chỉ số BMI của bạn là: " + bmi.toFixed(2) + "<br>");
+        if (bmi < 18.5) {
+            result.innerHTML += ("Underweight");
+        } else if (bmi < 25.0) {
+            result.innerHTML += ("Normal");
+        } else if (bmi < 30.0) {
+            result.innerHTML += ("Overweight");
+        } else {
+            result.innerHTML += ("Obese");
+        }
+    }
+</script>
+
+</body>
+</html>

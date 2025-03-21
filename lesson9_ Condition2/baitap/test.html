@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính BMI</title>
+</head>
+<body>
+
+<form onsubmit="calculate(); return false;">
+    <p>Tính Chỉ Số BMI</p>
+    <input id="weight" type="number" name="weight" placeholder="weight(kg)">
+    <input id="height" type="number" name="height" placeholder="height(m)">
+    <button type="button" onclick="calculate();">Tính</button>
+</form>
+
+<p id="result"></p> <!-- Hiển thị kết quả BMI -->
+<p id="classification"></p> <!-- Hiển thị phân loại BMI -->
+
+<script>
+    function calculate() {
+        let weight = parseFloat(document.getElementById("weight").value);
+        let height = parseFloat(document.getElementById("height").value);
+
+        if (isNaN(weight) || isNaN(height) || height <= 0) {
+            document.getElementById("result").innerText = "Vui lòng nhập cân nặng và chiều cao hợp lệ!";
+            return;
+        }
+
+        let bmi = weight / (height * height);
+        document.getElementById("result").innerText = "Chỉ số BMI của bạn là: " + bmi.toFixed(2);
+
+
+        phanLoai(bmi);
+    }
+
+    function phanLoai(bmi) {
+        let category = "";
+
+        if (bmi < 18.5) {
+            category = "Underweight";
+        } else if (bmi < 25.0) {
+            category = "Normal";
+        } else if (bmi < 30.0) {
+            category = "Overweight";
+        } else {
+            category = "Obese";
+        }
+
+        document.getElementById("classification").innerText = "Phân loại: " + category;
+    }
+</script>
+
+</body>
+</html>
