@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính Hoa Hồng</title>
+</head>
+<body>
+
+<h2>Tính Hoa Hồng</h2>
+<label for="doanh_so">Nhập doanh số bán hàng (VNĐ):</label>
+<input type="number" id="doanh_so" placeholder="Nhập số tiền" min="0">
+<button onclick="TinhHoaHong()">Tính</button>
+
+<p id="ket_qua"></p>
+<script>
+  function TinhHoaHong() {
+    let doanh_so = parseFloat(document.getElementById("doanh_so").value);
+
+    if (isNaN(doanh_so) || doanh_so < 0) {
+      document.getElementById("ket_qua").innerHTML = "Vui lòng nhập doanh số hợp lệ!";
+      return;
+    }
+    let hoa_hong = 0;
+    if (doanh_so < 5000000) {
+      hoa_hong = doanh_so * 0.02;
+    } else if (doanh_so <= 10000000) {
+      hoa_hong = doanh_so * 0.05;
+    } else {
+      hoa_hong = doanh_so * 0.1;
+    }
+
+    document.getElementById("ket_qua").innerHTML = `Hoa hồng của bạn: <b>${hoa_hong.toLocaleString()} VNĐ</b>`;
+  }
+
+  document.getElementById("doanh_so").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      TinhHoaHong();
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính Cước Điện Thoại</title>
+</head>
+<body>
+<!--Phí thuê bao cố định: 25.000 VNĐ/tháng-->
+<!--Cước gọi nội mạng: 600 VNĐ/phút-->
+<!--Cước gọi ngoại mạng: 1.200 VNĐ/phút-->
+<!--Phí dịch vụ Internet (nếu có): 50.000 VNĐ/tháng-->
+<h2>Tính Cước Điện Thoại</h2>
+
+<label for="so_phut_noi_mang">Số phút gọi nội mạng:</label>
+<input type="number" id="so_phut_noi_mang" placeholder="Nhập số phút" min="0"><br>
+
+<label for="so_phut_ngoai_mang">Số phút gọi ngoại mạng:</label>
+<input type="number" id="so_phut_ngoai_mang" placeholder="Nhập số phút" min="0"><br>
+
+<label for="su_dung_internet">
+  <input type="checkbox" id="su_dung_internet"> Sử dụng dịch vụ Internet
+</label><br>
+
+<button onclick="TinhCuoc()">Tính Cước</button>
+
+<p id="ket_qua"></p>
+
+<script>
+  function TinhCuoc() {
+    let so_phut_noi_mang = parseFloat(document.getElementById("so_phut_noi_mang").value) || 0;
+    let so_phut_ngoai_mang = parseFloat(document.getElementById("so_phut_ngoai_mang").value) || 0;
+    let su_dung_internet = document.getElementById("su_dung_internet").checked;
+
+    // Định mức phí
+    let phi_thue_bao = 25000;
+    let cuoc_noi_mang = so_phut_noi_mang * 600;
+    let cuoc_ngoai_mang = so_phut_ngoai_mang * 1200;
+    let phi_internet = su_dung_internet ? 50000 : 0;
+
+    // Tổng cước
+    let tong_cuoc = phi_thue_bao + cuoc_noi_mang + cuoc_ngoai_mang + phi_internet;
+
+    document.getElementById("ket_qua").innerHTML = `Tổng cước điện thoại: <b>${tong_cuoc.toLocaleString()} VNĐ</b>`;
+  }
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      TinhCuoc();
+    }
+  });
+</script>
+</body>
+</html>

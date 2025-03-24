@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form onsubmit="TinhDiem(); return false;">
+  <input type="number" id="diem_kiem_tra" placeholder="Điểm Kiểm Tra">
+  <input type="number" id="diem_giua_ki" placeholder="Điểm Giữa Kỳ">
+  <input type="number" id="diem_cuoi_ki" placeholder="Điểm Cuối Kỳ">
+  <button type="submit">Tính</button>
+</form>
+<body>
+<script>
+  // Xếp loại học lực của học sinh dựa trên:
+  // Điểm bài kiểm tra.
+  // Điểm thi giữa kỳ.
+  // Điểm thi cuối kỳ.
+  function TinhDiem() {
+  let diem_kiem_tra = parseFloat(document.getElementById("diem_kiem_tra").value);
+  let diem_giua_ki = parseFloat(document.getElementById("diem_giua_ki").value);
+  let diem_cuoi_ki = parseFloat(document.getElementById("diem_cuoi_ki").value);
+
+  let diem_tongKet = (diem_kiem_tra + diem_giua_ki * 2 + diem_cuoi_ki * 3) / 6 ;
+
+    document.write("Điểm Tổng Kết Của Bạn Là : " + diem_tongKet.toFixed(2) + "<br>");
+    if (diem_tongKet >= 8) {
+      document.write("Học lực giỏi!")
+    } else if (diem_tongKet >= 6.5) {
+      document.write("Học lực Khá!")
+    } else if (diem_tongKet >= 5) {
+      document.write("Học lực Trung Bình!")
+    } else {
+      document.write("Học Lực Yếu!")
+    }
+  }
+
+</script>
+
+</body>
+</html>

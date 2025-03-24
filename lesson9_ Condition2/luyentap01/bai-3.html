@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập một số nguyên bất kỳ, in ra kết quả để xác định số đó lớn hơn, nhỏ hơn hay bằng 0.-->
+<script>
+  let number = prompt("Enter a number: ");
+  if (isNaN(number)){
+    alert("Not a number");
+  }
+  else if (number > 0){
+    document.write("Số này lớn hơn 0.");
+  }else if (number < 0){
+  document.write("Số này nhỏ hơn 0.");
+  }else{
+  document.write("Số này bằng 0.");
+  }
+
+</script>
+</body>
+</html>
