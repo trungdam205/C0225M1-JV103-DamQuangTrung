@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url('anh_nen.jpg');
+    background-image: url('Image/anh_nen.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,12 +43,12 @@ body {
     font-size: 42px;
     font-weight: bold;
     color: black;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .score-box {
     position: absolute;
-    top: 20px;
+    top: 100px;
     right: 20px;
     background: rgba(255, 255, 255, 0.7);
     padding: 8px 12px;

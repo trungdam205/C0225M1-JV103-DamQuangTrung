@@ -1,3 +1,4 @@
+document.getElementById('bgMusic').play();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -240,3 +241,16 @@ function gameOverHandler() {
     alert('Game Over! Your Score: ' + score);
     location.reload();
 }
+function toggleMusic() {
+    const music = document.getElementById('bgMusic');
+    const musicButton = document.getElementById('musicButton');
+
+    if (music.paused) {
+        music.play();
+        musicButton.innerText = "Turn Music Off";
+    } else {
+        music.pause();
+        musicButton.innerText = "Turn Music On";
+    }
+}
+
