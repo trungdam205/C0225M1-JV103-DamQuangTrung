@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sách</title>
+    <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Quản lý sách</h2>
+<button onclick="themSachDaCo()">Thêm sách đã có</button>
+<button onclick="themSach()">Thêm sách mới</button>
+<button onclick="muonSach()">Mượn sách</button>
+<button onclick="hienThiSachNhieuNhat()">Hiển thị sách nhiều nhất</button>
+<table id="bookTable">
+    <thead>
+    <tr>
+        <th>Mã sách</th>
+        <th>Tên sách</th>
+        <th>Năm XB</th>
+        <th>Số quyển</th>
+        <th>Tình trạng</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script src="quan_li_sach.js"></script>
+</body>
+</html>

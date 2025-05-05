@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function tinhTrungBinhSoLeViTriChan() {
+    let soLuongPhanTu;
+
+    // Nhập số lượng phần tử hợp lệ
+    do {
+    let nhapTuNguoiDung = prompt("Nhập số lượng phần tử (1 đến 50):");
+    soLuongPhanTu = parseInt(nhapTuNguoiDung);
+    } while (isNaN(soLuongPhanTu) || soLuongPhanTu <= 0 || soLuongPhanTu > 50);
+
+    let arr = [];
+
+// Nhập từng phần tử và kiểm tra hợp lệ
+    for (let i = 0; i < soLuongPhanTu; i++) {
+    let giaTriPhanTu;
+
+    do {
+    let nhapGiaTri = prompt(`Nhập phần tử thứ ${i + 1}:`);
+    giaTriPhanTu = parseInt(nhapGiaTri);
+    } while (isNaN(giaTriPhanTu));
+    arr.push(giaTriPhanTu);
+    }
+
+    console.log("Mảng đã nhập:", arr);
+
+    // Tính trung bình cộng các số lẻ ở vị trí chẵn
+    let sum = 0;
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i += 2) {
+    let giaTriHienTai = arr[i];
+
+    if (giaTriHienTai % 2 !== 0) {
+    sum += giaTriHienTai;
+    count++;
+    }
+    }
+
+if (count > 0) {
+    let trungBinh = sum / count;
+    console.log("Trung bình cộng các số lẻ ở vị trí chẵn là:", trungBinh);
+    } else {
+    console.log("Không có số lẻ ở vị trí chẵn.");
+    }
+}
+tinhTrungBinhSoLeViTriChan();
+</script>
+</body>
+</html>
