@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra a chia het b hay khong </title>
+</head>
+<body>
+<script>
+    let a = +prompt("Enter a value of A: ");
+    let b = +prompt("Enter a value of B: ");
+    if(isNaN(a) || isNaN(b)){
+        alert("Not a number");
+    }
+    else if (a % b == 0){
+        document.write("A chia het cho B");
+    }else{
+        document.write("A khong chia het cho B");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc if...else...if</title>
+</head>
+<body>
+<script>
+  // Nếu tên nhập vào là "Admin":
+  // Yêu cầu nhập mật khẩu.
+  //         Nếu mật khẩu là "TheMaster", in ra chuỗi "Welcome".
+  //         Nếu mật khẩu là null, in ra chuỗi "Canceled".
+  //         Còn lại, in ra chuỗi "Wrong password".
+  //         Nếu tên nhập vào là null, in ra chuỗi "Canceled".
+  //         Còn lại, in ra chuỗi "I don’t know you".
+
+
+  let userName = prompt("Please enter your name: ");
+  if( userName == 'Admin') {
+    let password = prompt("Please enter your password: ");
+    if (password == 'TheMaster') {
+      document.write('Welcome!');
+    } else if (password == null) {
+      document.write('Canceled');
+    } else {
+      document.write('Wrong password');
+    }
+  }else if (userName == null) {
+    document.write(Canceled);
+  } else {
+    document.write('I dont know you');
+  }
+
+</script>
+</body>
+</html>

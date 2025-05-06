@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+function CheckTN(n) {
+    if(n < 2) return false;
+    if (n === 2 || n === 3) return true;
+    if (n % 2 === 0 || n % 3 === 0) return false;
+
+    for(let i = 5 ; i <= Math.sqrt(n); i +=6) {
+        if (n % i === 0 || n % (i+2) === 0) return false;
+    }
+    return true;
+}
+
+function In(number) {
+    let count = 0;
+    let i = 2;
+    while(count < number){
+        if (CheckTN(i)){
+            document.write(i + "<br>");
+            count++;
+        }
+        i++;
+    }
+}
+
+let number = +prompt("Nhập số lượng số nguyên tố từ số đầu tiên: ");
+In(number);
+
+
+</script>
+</body>
+
+</html>

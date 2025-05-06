@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu bắt đầu -->
+<div id="menu" class="menu">
+    <h1 class="title">Tetris Game</h1>
+    <div class="options">
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+        <button id="musicButton" onclick="toggleMusic()">Turn Music Off</button>
+    </div>
+    <div id="highScoreBox">
+        High Score: <span id="highScore">0</span>
+    </div>
+</div>
+
+<!-- Game -->
+<div id="gameContainer" style="display:none;">
+    <div class="game">
+        <h1 class="title">Tetris Game</h1>
+        <div class="score-box">
+            Score: <span id="score">0</span>
+        </div>
+        <canvas id="canvas" width="400" height="720"></canvas>
+    </div>
+</div>
+<audio id="bgMusic" loop>
+    <source src="Sound/sound_game.mp3" type="audio/mpeg">
+</audio>
+<script src="shape.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
