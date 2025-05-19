@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lesson5_AccessModifier_Static/Lesson5_AccessModifier_Static.iml" filepath="$PROJECT_DIR$/Lesson5_AccessModifier_Static/Lesson5_AccessModifier_Static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module2.iml" filepath="$PROJECT_DIR$/Module2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lession2_Loop/thuc_hanh/Prime/Prime.iml" filepath="$PROJECT_DIR$/lession2_Loop/thuc_hanh/Prime/Prime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lession2_Loop/thuc_hanh/display_geometry/display_geometry.iml" filepath="$PROJECT_DIR$/lession2_Loop/thuc_hanh/display_geometry/display_geometry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lession2_Loop/thuc_hanh/draw-geometry/draw-geometry.iml" filepath="$PROJECT_DIR$/lession2_Loop/thuc_hanh/draw-geometry/draw-geometry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lession2_Loop/thuc_hanh/greatest-common-factor/greatest-common-factor.iml" filepath="$PROJECT_DIR$/lession2_Loop/thuc_hanh/greatest-common-factor/greatest-common-factor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lession2_Loop/thuc_hanh/interest_calculato/interest_calculato.iml" filepath="$PROJECT_DIR$/lession2_Loop/thuc_hanh/interest_calculato/interest_calculato.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson4_OOP/lesson4_OOP.iml" filepath="$PROJECT_DIR$/lesson4_OOP/lesson4_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson5_AccessModifier_Static/thuc_hanh/static-method-test/static-method-test.iml" filepath="$PROJECT_DIR$/Lesson5_AccessModifier_Static/thuc_hanh/static-method-test/static-method-test.iml" />
+    </modules>
+  </component>
+</project>
