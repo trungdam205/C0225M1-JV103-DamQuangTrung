@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="10"
+      padding="10">
+    <Label text="Order và Đặt bàn" />
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints valignment="CENTER"/>
+            <RowConstraints valignment="CENTER"/>
+            <RowConstraints valignment="CENTER"/>
+            <RowConstraints valignment="CENTER"/>
+            <RowConstraints valignment="CENTER"/>
+        </rowConstraints>
+
+        <!-- Dòng 1: Bàn, ComboBox chọn bàn, nút đặt bàn -->
+        <Label text="Bàn:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <ComboBox fx:id="cboTable" prefWidth="100" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button text="Đặt bàn" fx:id="btnBook" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+        <!-- Dòng 2: SĐT khách, nhãn hội viên -->
+        <Label text="SĐT:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtPhone" promptText="Số điện thoại khách" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label fx:id="lblMember" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="2"/>
+
+        <!-- Dòng 3: Món ăn -->
+        <Label text="Món:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cboMenu" prefWidth="100" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Dòng 4: Số lượng và nút gọi món -->
+        <Label text="SL:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtQty" promptText="Số lượng" prefWidth="80" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Button text="Gọi món" fx:id="btnAdd" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+        <!-- Dòng 5: Xem bill -->
+        <Button text="Xem bill and thanh toán" fx:id="btnShowOrder" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+    </GridPane>
+    <Label fx:id="lblStatus" />
+    <Label text="Order hiện tại:"/>
+    <TextArea fx:id="txtOrder" prefRowCount="8" editable="false"/>
+</VBox>

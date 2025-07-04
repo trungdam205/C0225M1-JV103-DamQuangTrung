@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.TableManagementController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 25;">
+    <Label text="Quản lý bàn" style="-fx-font-size: 22px"/>
+    <TableView fx:id="tableView" prefWidth="350">
+        <columns>
+            <TableColumn fx:id="colId" text="Bàn" prefWidth="100"/>
+            <TableColumn fx:id="colStatus" text="Trạng thái" prefWidth="200"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="Làm trống bàn" onAction="#handleEmptyTable"/>
+        <Button text="Làm trống tất cả" onAction="#handleEmptyAll"/>
+    </HBox>
+</VBox>

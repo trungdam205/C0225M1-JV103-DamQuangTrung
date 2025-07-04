@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.MainController">
+    <top>
+        <Label text="☕ QUẢN LÝ QUÁN CÀ PHÊ" style="-fx-font-size: 24px; -fx-padding: 10;"/>
+    </top>
+
+    <center>
+        <TabPane fx:id="mainTabPane">
+            <Tab text="Menu">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                    <Button text="Hiển thị Menu" onAction="#onShowMenu"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Tồn kho">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                    <Button text="Hiển thị Kho" onAction="#onShowInventory"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Gọi món">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                    <Button text="Gọi món" onAction="#onPlaceOrder"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Thanh toán">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                    <Button text="Thanh toán" onAction="#onCheckout"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Khách hàng">
+                <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                    <Button text="Hiển thị danh sách KH" onAction="#onShowCustomers"/>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
