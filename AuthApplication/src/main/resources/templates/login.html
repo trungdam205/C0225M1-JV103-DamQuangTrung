@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{login.title}">Login</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="auth-card">
+
+    <div class="auth-header">
+        <h2 th:text="#{login.title}">Đăng nhập</h2>
+        <p th:text="#{login.subtitle}">Chào mừng trở lại</p>
+    </div>
+
+    <div th:if="${error}" class="alert alert-error" th:text="#{login.error}"></div>
+    <div th:if="${logout}" class="alert alert-success" th:text="#{login.logout}"></div>
+    <div th:if="${registered}" class="alert alert-success" th:text="#{login.registered}"></div>
+
+    <form th:action="@{/login}" method="post">
+
+        <div class="form-group">
+            <label th:text="#{login.username}">Tên đăng nhập</label>
+            <input type="text" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label th:text="#{login.password}">Mật khẩu</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" th:text="#{login.button}">
+            Đăng nhập
+        </button>
+    </form>
+
+    <div class="auth-footer">
+        <span th:text="#{login.noaccount}">Chưa có tài khoản?</span>
+        <a th:href="@{/register}" th:text="#{login.register}">Đăng ký ngay</a>
+    </div>
+
+    <!-- Switch Language -->
+    <div style="margin-top: 18px; text-align:center;">
+        <a th:href="@{/login(lang='vi')}">🇻🇳 Tiếng Việt</a> |
+        <a th:href="@{/login(lang='en')}">🇬🇧 English</a>
+    </div>
+
+</div>
+
+</body>
+</html>

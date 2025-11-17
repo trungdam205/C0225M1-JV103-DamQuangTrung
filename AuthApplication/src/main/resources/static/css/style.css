@@ -1,0 +1,203 @@
+/* =======================
+   Modern Auth UI (by ChatGPT)
+   Clean – Minimal – Professional
+   ======================= */
+
+:root {
+    --bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --primary: #1e293b;
+    --secondary: #64748b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --danger: #dc2626;
+    --success: #16a34a;
+
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+    --input-bg: #fafafa;
+    --input-border: #e2e8f0;
+
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* CARD WRAPPER */
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card-bg);
+    padding: 36px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #e5e7eb;
+    animation: fadeUp 0.45s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADINGS */
+.auth-header {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.auth-header h2 {
+    margin: 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.auth-header p {
+    margin: 6px 0 0;
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    font-size: 15px;
+    background: var(--input-bg);
+    transition: 0.2s border, 0.2s box-shadow;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* ALERTS */
+.alert {
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    animation: fade 0.3s ease-out;
+}
+
+.alert-error {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: var(--danger);
+}
+
+.alert-success {
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+    color: var(--success);
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* TEXT & LINKS */
+.auth-footer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+.auth-footer a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* HOME PAGE */
+.home-container {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    animation: fadeUp 0.45s ease;
+}
+
+.home-container h2 {
+    margin: 0;
+    font-size: 26px;
+    color: var(--primary);
+}
+
+.home-container p {
+    margin-top: 12px;
+    color: var(--secondary);
+}
+
+.logout-btn {
+    margin-top: 20px;
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
